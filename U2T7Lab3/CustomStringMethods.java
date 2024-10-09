@@ -37,6 +37,16 @@ public class CustomStringMethods {
         str1 = methods.halvesReversed("see you later!");
         System.out.println(str1);
         
+        String str2 = methods.pigLatin("computer");
+        System.out.println(str2);
+        str2 = methods.pigLatin("sky");
+        System.out.println(str2);
+        str2 = methods.pigLatin("Brooklyn");
+        System.out.println(str2);
+        str2 = methods.pigLatin("weekend");
+        System.out.println(str2);
+        
+            
     }
 }
 

@@ -20,4 +20,19 @@ public class methods {
         String str2 = string.substring(len/2);
         return str2+str1;
     }
+
+    public static String pigLatin(String str1){
+        char c = str1.charAt(0);
+        str1 = str1.replaceFirst(""+c, "");
+        return str1+c+"ay";
+    }
+
+    public static String yellOrWhisper(String string){
+        char c = string.charAt(0);
+        if(Character.isUpperCase(c)==true){
+            
+        }else{
+
+        }
+    }
 }
