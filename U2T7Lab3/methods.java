@@ -30,9 +30,51 @@ public class methods {
     public static String yellOrWhisper(String string){
         char c = string.charAt(0);
         if(Character.isUpperCase(c)==true){
-            
+            return string.toUpperCase();
         }else{
-
+            return string.toLowerCase();
         }
+    }
+
+    public static String removeCharacter(String string, int i) {
+       if(i<string.length()){
+        string = string.replaceFirst(""+string.charAt(i),"");
+       } 
+        return string;
+    }
+
+    public static String insertAt(String string, String string2, String string3) {
+        int dex1 = string.indexOf(string3);
+        if(!string.contains(string3)){
+            string = string+string2;
+        }else{
+            string = string.substring(0,dex1)+string2+string.substring(dex1);
+        }
+        return string;
+    }
+
+    public static String endUp(String string, int i) {
+       if(i>string.length()) {
+        i=string.length();
+       }else{
+        i=string.length()-i;
+       }
+       String str = string.substring(i);
+       string = string.substring(0,i)+str.toUpperCase();
+       return string;
+    }
+
+    public static String starBetween(String string) {
+        char[] array=new  char[string.length()];
+
+        for(int count=0;count<array.length;count++){
+               array[count] = string.charAt(count);
+        }
+        string = "";
+        for(int count=0;count<array.length;count++){
+            string+=("*"+array[count]);
+        }
+        string = string.replaceFirst("\\*","");
+        return string;
     }
 }
